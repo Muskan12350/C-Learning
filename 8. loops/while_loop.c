@@ -31,13 +31,12 @@ int main(){
 	}
 
     // print odd numbers from 1 to 10
-    
-int y=1;
+
+    int y=1;
     while(y<=10){
     	printf("%d\n", y);
     	y=y+2;
     }
-    	
+
     return 0;
 }
-
