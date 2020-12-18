@@ -15,7 +15,7 @@ int main(){
     do{
     	printf("%d\n", j);
     	j++;
-    	}while(j<=10);
+    }while(j<=10);
 
     // print numbers from 10 to 1
     int k=10;
@@ -30,15 +30,15 @@ int main(){
     do{
     	printf("%d\n", x);
     	x=x+2;
-	}while(x<=10);
+    }while(x<=10);
 
     // print odd numbers from 1 to 10
     
-int y=1;
-	do{
-		printf("%d\n", y);
+    int y=1;
+    do{
+	printf("%d\n", y);
     	y=y+2;
-	}while(y<=10);
+    }while(y<=10);
     
     	
     return 0;
