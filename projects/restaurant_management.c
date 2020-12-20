@@ -1,5 +1,6 @@
 #include<stdio.h>
 
+// function to print developer details
 void showDeveloperDetail(){
     printf("\n");
     printf("\t\t***********************************************************************************\n");
@@ -27,6 +28,7 @@ void showDeveloperDetail(){
     printf("\n\n");
 }
 
+// function to print menu card
 void showMenuCard(){
     printf("_____________________________________________________________________________________________________\n");
 	printf("********************************  Menu Card  ******************************************\n");
@@ -54,7 +56,10 @@ void showMenuCard(){
 
 int main(){
 
+    // Calling showDeveloperDetail() to show the developer details
     showDeveloperDetail();
+
+    // Calling showMenuCard() to show the menu card
     showMenuCard();
 
     return 0;
