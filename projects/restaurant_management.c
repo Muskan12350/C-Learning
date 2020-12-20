@@ -55,12 +55,21 @@ void showMenuCard(){
 }
 
 int main(){
+    // Required Variables
+    int orderChoice;
 
     // Calling showDeveloperDetail() to show the developer details
     showDeveloperDetail();
 
-    // Calling showMenuCard() to show the menu card
-    showMenuCard();
+    // Infinite Loop
+    while(1){
+        // Calling showMenuCard() to show the menu card
+        showMenuCard();
+
+        // Take user choice input
+        printf("Select your order: ");
+        scanf("%d", &orderChoice);
+    }
 
     return 0;
 }
