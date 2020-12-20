@@ -69,6 +69,15 @@ int main(){
         // Take user choice input
         printf("Select your order: ");
         scanf("%d", &orderChoice);
+
+        // Check user selected choice using switch case
+        switch(orderChoice){
+            case 0: exit(0);
+                    break;
+            default: printf("-----------------------------------------------------------------\n\n");
+                     printf("\tInvalid Choice.\n\n");
+                     printf("-----------------------------------------------------------------\n");
+        }
     }
 
     return 0;
