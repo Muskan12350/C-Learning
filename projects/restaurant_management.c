@@ -33,7 +33,7 @@ void showMenuCard(){
     printf("_____________________________________________________________________________________________________\n");
 	printf("********************************  Menu Card  ******************************************\n");
 	printf("\t01) Chicken Roll                            100\n");
-	printf("\t02) Bief Roll                               80\n");
+	printf("\t02) Beef Roll                               80\n");
 	printf("\t03) Reshmi Roll                             120\n");
 	printf("\t04) Zinger Burger                           180\n");
 	printf("\t05) Bief Burger                             120\n");
@@ -43,7 +43,7 @@ void showMenuCard(){
 	printf("\t09) Chicken Tikka                           160\n");
 	printf("\t10) Broast                                  160\n");
 	printf("\t11) Chicken Karhayi (half)                  500\n");
-	printf("\t12) Chicken karhayi (Full)                  1000\n");
+	printf("\t12) Chicken karhayi (full)                  1000\n");
 	printf("\t13) Paratha                                 20\n");
 	printf("\t14) Ice Cream                               60\n");
 	printf("\t15) Shake                                   60\n");
@@ -63,7 +63,7 @@ int getItemBill(char itemName[], int itemPrice){
     printf("\tEnter quantity: ");
     scanf("%d", &quantity);
 
-    printf("\tItem Name = %s\n", itemName);
+    printf("\t%s = %d\n", itemName, quantity);
 
     int itemBill = itemPrice * quantity;
     printf("\tBill =  %d\n", itemBill);
@@ -81,14 +81,16 @@ int main(){
     int item9Bill=0, item10Bill=0, item11Bill=0, item12Bill=0;
     int item13Bill=0, item14Bill=0, item15Bill=0, item16Bill=0;
 
+    int icecreamChoice, shakeChoice;
+
     // Calling showDeveloperDetail() to show the developer details
     showDeveloperDetail();
 
+    // Calling showMenuCard() to show the menu card
+    showMenuCard();
+
     // Infinite Loop
     while(1){
-        // Calling showMenuCard() to show the menu card
-        showMenuCard();
-
         // Take user choice input
         printf("Select your order: ");
         scanf("%d", &orderChoice);
@@ -99,36 +101,53 @@ int main(){
                 exit(0);
                 break;
             case 1:
+                // int itemBill = getItemBill("Chicken Roll", 100);
+                // item1Bill = item1Bill + itemBill;
+                // item1Bill = item1Bill + getItemBill("Chicken Roll", 100);
+                item1Bill += getItemBill("Chicken Roll", 100);
                 break;
             case 2:
+                item2Bill += getItemBill("Beef Roll", 80);
                 break;
             case 3:
+                item3Bill += getItemBill("Reshmi Roll", 120);
                 break;
             case 4:
+                item4Bill += getItemBill("Zinger Burger", 180);
                 break;
             case 5:
+                item5Bill += getItemBill("Bief Burger", 120);
                 break;
             case 6:
+                item6Bill += getItemBill("Club Sandwitch", 160);
                 break;
             case 7:
+                item7Bill += getItemBill("Medium Pizza", 500);
                 break;
             case 8:
+                item8Bill += getItemBill("Large Pizza", 800);
                 break;
             case 9:
+                item9Bill += getItemBill("Chicken Tikka", 160);
                 break;
             case 10:
+                item10Bill += getItemBill("Broast", 160);
                 break;
             case 11:
+                item11Bill += getItemBill("Chicken Karhayi (half)", 500);
                 break;
             case 12:
+                item12Bill += getItemBill("Chicken Karhayi (full)", 1000);
                 break;
             case 13:
-                break;
-            case 14:
-                break;
-            case 15:
+                item13Bill += getItemBill("Paratha", 20);
                 break;
             case 16:
+                totalBill = totalBill + item1Bill + item2Bill + item3Bill + item4Bill + item5Bill + item6Bill + item7Bill + item8Bill + item9Bill + item10Bill + item11Bill + item12Bill + item13Bill + item14Bill + item15Bill;
+                printf("*****************************************************************************\n");
+		        printf("\t\t\tTotal Bill = %d\n\n", totalBill);
+		        printf("xxxxxxxxxxxxxx=============xxxxxxxxxxxxxxxxxxx=============xxxxxxxxxxxxxxxxxxxx\n");
+                exit(0);
                 break;
             default:
                 printf("-----------------------------------------------------------------\n\n");
