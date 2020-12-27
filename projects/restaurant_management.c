@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<stdlib.h>
 
 // function to print developer details
 void showDeveloperDetail(){
@@ -54,6 +55,24 @@ void showMenuCard(){
 	printf("\n");
 }
 
+void showIcecreamFlavours(){
+    printf("Which Flavour of Ice cream do you want?\n");
+    printf("01) Peshawri\n");
+    printf("02) Chocolate\n");
+    printf("03) Pista\n");
+    printf("04) Vanilla\n");
+    printf("05) Tuti Fruity\n");
+}
+
+void showShakeFlavours(){
+    printf("Which Flavour of Shake do you want?\n");
+    printf("01) Chocolate Shake\n");
+    printf("02) Mango Shake\n");
+    printf("03) Banana Shake \n");
+    printf("04) Apple Shake\n");
+    printf("05) Milk Shake\n");
+}
+
 // function to take quantity input and returns the price for each item
 int getItemBill(char itemName[], int itemPrice){
     printf("---------------------------------------------------------------------------\n");
@@ -80,7 +99,6 @@ int main(){
     int item5Bill=0, item6Bill=0, item7Bill=0, item8Bill=0;
     int item9Bill=0, item10Bill=0, item11Bill=0, item12Bill=0;
     int item13Bill=0, item14Bill=0, item15Bill=0, item16Bill=0;
-
     int icecreamChoice, shakeChoice;
 
     // Calling showDeveloperDetail() to show the developer details
@@ -94,6 +112,8 @@ int main(){
         // Take user choice input
         printf("Select your order: ");
         scanf("%d", &orderChoice);
+
+        printf("\n");
 
         // Check user selected choice using switch case
         switch(orderChoice){
@@ -141,6 +161,62 @@ int main(){
                 break;
             case 13:
                 item13Bill += getItemBill("Paratha", 20);
+                break;
+            case 14:
+                showIcecreamFlavours();
+                printf("Enter your choice: ");
+                scanf("%d", &icecreamChoice);
+
+                switch(icecreamChoice){
+                    case 1:
+		         	    item14Bill += getItemBill("Peshawri Ice cream", 60);
+		         	    break;
+                    case 2:
+		         	    item14Bill += getItemBill("Choclate Ice cream", 60);
+		         	    break;
+                    case 3:
+		         	    item14Bill += getItemBill("Pista Ice cream", 60);
+		         	    break;
+                    case 4:
+		         	    item14Bill += getItemBill("Vanilla Ice cream", 60);
+		         	    break;
+                    case 5:
+		         	    item14Bill += getItemBill("Tuti Fruity Ice cream", 60);
+		         	    break;
+                    default:
+                        printf("-----------------------------------------------------------------\n\n");
+                        printf("\tInvalid Choice.\n\n");
+                        printf("-----------------------------------------------------------------\n");
+                }
+
+                break;
+            case 15:
+                showShakeFlavours();
+                printf("Enter your choice: ");
+                scanf("%d", &shakeChoice);
+
+                switch(shakeChoice){
+                    case 1:
+		         	    item15Bill += getItemBill("Chocolate Shake", 60);
+		         	    break;
+                    case 2:
+		         	    item15Bill += getItemBill("Mango Shake", 60);
+		         	    break;
+                    case 3:
+		         	    item15Bill += getItemBill("Banana Shake", 60);
+		         	    break;
+                    case 4:
+		         	    item15Bill += getItemBill("Apple Shake", 60);
+		         	    break;
+                    case 5:
+		         	    item15Bill += getItemBill("Milk Shake", 60);
+		         	    break;
+                    default:
+                        printf("-----------------------------------------------------------------\n\n");
+                        printf("\tInvalid Choice.\n\n");
+                        printf("-----------------------------------------------------------------\n");
+                }
+
                 break;
             case 16:
                 totalBill = totalBill + item1Bill + item2Bill + item3Bill + item4Bill + item5Bill + item6Bill + item7Bill + item8Bill + item9Bill + item10Bill + item11Bill + item12Bill + item13Bill + item14Bill + item15Bill;
