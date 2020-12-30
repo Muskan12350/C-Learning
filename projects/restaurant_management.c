@@ -15,12 +15,12 @@ void showDeveloperDetail(){
     printf("\t\t***|                                                                           |***\n");
     printf("\t\t***|   Details of Project Maker:                                               |***\n");
     printf("\t\t***|                                                                           |***\n");
-    printf("\t\t***|           Name       : Waqar Ali Siyal                                    |***\n");
-    printf("\t\t***|           Roll no    : 18SW82                                             |***\n");
-    printf("\t\t***|           Department : Software Engineering                               |***\n");
-    printf("\t\t***|           Batch      : 18                                                 |***\n");
-    printf("\t\t***|           Section    : 2                                                  |***\n");
-    printf("\t\t***|           University : MUET, Jamshoro.                                    |***\n");
+    printf("\t\t***|           Name       : Muskan Thahim                                      |***\n");
+    printf("\t\t***|           Reg. No    : 2012397                                            |***\n");
+    printf("\t\t***|           Field      : Computer Science                                   |***\n");
+    printf("\t\t***|           Subject    : Fundamentals of Programming                        |***\n");
+    printf("\t\t***|           Section    : G                                                  |***\n");
+    printf("\t\t***|           University : SZABIST                                            |***\n");
     printf("\t\t***|                                                                           |***\n");
     printf("\t\t***|                                                                           |***\n");
     printf("\t\t***-----------------------------------------------------------------------------***\n");
