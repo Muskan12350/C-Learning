@@ -1,0 +1,6 @@
+1. Input marks for five subjects and store in variables marks1, marks2, marks3, marks4 and marks5.
+2. Calculate the sum of all subject marks and store in a variable sum.
+           sum = marks1 + marks2 + marks3 + marks4 + marks5
+3. Divide the sum of all marks by no. of subjects and store in variable avg.
+           avg = sum/5
+4. print avg
