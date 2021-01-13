@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<string.h>
 
 struct Employee
 {
@@ -43,12 +44,12 @@ void printDetailsByCheckingSalary(struct Employee emps[3]){
 
 void printDetailsByCheckingNameAndSalary(struct Employee emps[3]){
     for(int i=0;i<3;i++){
-        if(emps[i].salary==29000 && emps[i].name=="Kaleem"){
+        if(emps[i].salary==29000 && strcmp(emps[i].name, "Kaleem")==0){
             printf("Id of Employee: %d\n", emps[i].id);
             printf("Name of Employee: %s\n", emps[i].name);
             printf("Date of Joining: %s\n", emps[i].dateofJoining);
             printf("Position of Employee: %c\n", emps[i].position);
-            printf("Salary of Employee: %.2f\n\n", emps[i].salary);
+            printf("Salary of Employee: %.d\n\n", emps[i].salary);
         }
     }
 }
